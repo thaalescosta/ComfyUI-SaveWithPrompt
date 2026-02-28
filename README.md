@@ -12,26 +12,13 @@ prefix_2.png  /  prefix_2.txt
 
 ## Installation
 
-1. Copy the `SaveWithPrompt` folder into:
-   ```
-   ComfyUI/custom_nodes/SaveWithPrompt/
-   ```
-   The final structure should look like:
-   ```
-   ComfyUI/
-   └── custom_nodes/
-       └── SaveWithPrompt/
-           ├── __init__.py
-           └── nodes/
-               └── save_with_prompt.py
-   ```
+1. Clone this repo into the custom_nodes folder
 
 2. Restart ComfyUI.
 
-3. Search for **"Save With Prompt"** in the node menu (under `image/output`).
+3. Search for **"Save With Prompt"** in the node menu.
 
 ---
-
 ## Inputs
 
 | Input | Type | Required | Description |
@@ -60,11 +47,10 @@ Negative prompt string ───────────────────
 ---
 
 ## Output TXT format
-
+If the user has connected both positive and negative they will show like this:
 ```
-=== Positive Prompt ===
 hyper-realistic frontal head shot, natural soft light ...
 
-=== Negative Prompt ===
 blurry, low quality, watermark ...
 ```
+Otherwise if one is not connected the other will be exported
